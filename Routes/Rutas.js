@@ -22,11 +22,4 @@ Router.delete("/delete-Products/:id", EliminarProductID);
 Router.put("/edit-producto/:id", editProduct);
 Router.get("/get-producto/:id", GetId);
 
-Router.post("/img", async (req, res) => {
-  res.send("recivido ");
-  const urlimg = await cloudinary.v2.uploader.upload(req.files.image.file);
-
-  console.log(urlimg.url);
-});
-
 module.exports = Router;
