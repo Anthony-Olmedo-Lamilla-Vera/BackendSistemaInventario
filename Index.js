@@ -4,7 +4,7 @@ const { Router } = require("../Backend/Routes/Rutas");
 const mongoose = require("mongoose");
 const app = express();
 var bb = require("express-busboy");
-const fileUpload = require("express-fileupload");
+//const fileUpload = require("express-fileupload");
 bb.extend(app, {
   upload: true,
   path: "./Data/files",
@@ -20,7 +20,8 @@ app.use(cors());
 app.use("/api/v1", require("../Backend/Routes/Rutas"));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.listen(process.env.PORT || 5000, () => {
+
+app.listen(5000, () => {
   console.log("================================");
   console.log("=========CONECTADO!=============");
 });

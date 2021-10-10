@@ -9,6 +9,7 @@ const SchemeProduct = new Schema(
     Descripcion: String,
     Precio: Number,
     Img: String,
+    UserId: String,
   },
   {
     timestamps: true,
